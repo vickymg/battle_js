@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Battle</title>
+  </head>
+  <body>
+    <section id="enter-names">
+      <h1>Enter your names...</h1>
+        <form id="names">
+          <input class="names" id="name1" type="text" placeholder="Player 1 Name">
+          <input class="names" id="name2" type="text" placeholder="Player 2 Name">
+          <input class="names" id="submit" type="submit" value="Play!">
+        </form>
+      </section>
+      <section id="play">
+        <h1 class="displayname1"></h1> vs.<h1 class="displayname2"></h1>
+        <p class="displayname1"></p><p id="player1points"></p>
+        <p class="displayname2"></p><p id="player2points"></p>
+        <button class="attack" id="attack1">Attack</button>
+        <button class="attack" id="attack2">Attack</button>
+      </section>
+      <section id="game-over">
+        <h1>Game Over!</h1>
+      </section>
+    <link rel="stylesheet" type="text/css" href="public/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="src/Battle.js"></script>
+    <script src="./interface.js"></script>
+  </body>
+</html>
