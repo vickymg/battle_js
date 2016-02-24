@@ -4,8 +4,9 @@
     <title>Battle</title>
   </head>
   <body>
+    <h1>Battle!</h1>
     <section id="enter-names">
-      <h1>Enter your names...</h1>
+      <h2>Enter your names...</h2>
         <form id="names">
           <input class="names" id="name1" type="text" placeholder="Player 1 Name">
           <input class="names" id="name2" type="text" placeholder="Player 2 Name">
@@ -18,6 +19,8 @@
         <p class="displayname2"></p><p id="player2points"></p>
         <button class="attack" id="attack1">Attack</button>
         <button class="attack" id="attack2">Attack</button>
+        <button class="paralyse" id="paralyse1">Paralyse</button>
+        <button class="paralyse" id="paralyse2">Paralyse</button>
       </section>
       <section id="game-over">
         <h1>Game Over!</h1>
@@ -25,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="public/style.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="src/Battle.js"></script>
+    <script src="src/Player.js"></script>
     <script src="./interface.js"></script>
   </body>
 </html>

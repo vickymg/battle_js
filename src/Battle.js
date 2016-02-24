@@ -3,16 +3,17 @@ function Battle() {
   this.player2Points = 60;
 }
 
-Battle.prototype.player1Attacks = function() {
-  if(this.player2Points <= 0) {
-    throw new Error("Game Over!");
-  }
-  this.player2Points -=5;
+Battle.prototype.setPlayers = function(pl1, pl2) {
+  this.player1 = pl1;
+  this.player2 = pl2;
 };
 
-Battle.prototype.player2Attacks = function() {
-  if(this.player1Points <= 0) {
-    throw new Error("Game Over!");
+Battle.prototype.attack = function() {
+  if (this.player1.attack === true) {
+    this.player2Points -= 5;
+    this.player1.attack = false;
   }
-  this.player1Points -=5;
+  else {
+    this.player1Points -= 5;
+  }
 };

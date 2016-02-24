@@ -1,11 +1,14 @@
 $(document).ready(function() {
-  var battle = new Battle();
-
   $('#play').hide();
   $('#game-over').hide();
 
+  var battle = new Battle();
+  var pl1 = new Player(battle);
+  var pl2 = new Player(battle);
+
   $('#names').submit(function(event) {
     event.preventDefault();
+    battle.setPlayers(pl1, pl2)
     var name1 = $('#name1').val();
     var name2 = $('#name2').val();
     $('#play').show(0);
@@ -16,7 +19,7 @@ $(document).ready(function() {
   });
 
   function updateScore() {
-    if(battle.player1Points === 0 || battle.player1Points === 0) {
+    if(battle.player1Points === 0 || battle.player2Points === 0) {
       $('#game-over').show();
     }
     $('#player1points').text(battle.player1Points);
@@ -24,12 +27,12 @@ $(document).ready(function() {
   }
 
   $('#attack1').on('click', function() {
-    battle.player2Attacks();
+    battle.player1.attackOpponent();
     updateScore();
   });
 
   $('#attack2').on('click', function() {
-    battle.player1Attacks();
+    battle.player2.attackOpponent();
     updateScore();
   });
 
