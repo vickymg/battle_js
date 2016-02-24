@@ -13,19 +13,30 @@
           <input class="names" id="submit" type="submit" value="Play!">
         </form>
       </section>
-      <section id="play">
-        <h1 class="displayname1"></h1> vs.<h1 class="displayname2"></h1>
-        <p class="displayname1"></p><p id="player1points"></p>
-        <p class="displayname2"></p><p id="player2points"></p>
-        <button class="attack" id="attack1">Attack</button>
-        <button class="attack" id="attack2">Attack</button>
-        <button class="paralyse" id="paralyse1">Paralyse</button>
-        <button class="paralyse" id="paralyse2">Paralyse</button>
+      <section class="hide" id="play">
+        <h1 class="displayname1"></h1> vs. <h1 class="displayname2"></h1>
+        <br>
+        <section class="hide" id="player1">
+          <p class="displayname1"></p><p id="player1points"></p>
+          <button class="attack" id="attack1">Attack</button>
+          <button class="ninja" id="ninja1">Ninja Attack</button>
+        </section>
+        <br><br>
+        <section class="hide" id="player2">
+          <p class="displayname2"></p><p id="player2points"></p>
+          <button class="attack" id="attack2">Attack</button>
+          <button class="ninja" id="ninja2">Ninja Attack</button>
+        </section>
       </section>
-      <section id="game-over">
-        <h1>Game Over!</h1>
-      </section>
+        <section class="hide" id="game-over">
+          <h1 class="winner"> Game Over!</h1>
+          <br>
+          <h3> The winner is </h3> <h3 class="winner-name"></h3>
+          <br>
+          <h3> :-) </h3>
+        </section>
     <link rel="stylesheet" type="text/css" href="public/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="src/Battle.js"></script>
     <script src="src/Player.js"></script>

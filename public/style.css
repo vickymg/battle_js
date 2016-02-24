@@ -1,1 +1,62 @@
-<div id="play" style="display:none">
+< meta name="viewport" content="width=device-width, initial-scale=1" />
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #003366;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    color: #ffffff;
+}
+
+h1, h3 {
+  display:inline-block;
+}
+
+/*#player1, #player2 {
+  display:inline-block;
+}*/
+
+.names {
+	padding:6px 15px 6px 30px;
+	margin:3px;
+	background: url('./images/search.png') no-repeat 8px 6px;
+}
+
+form {
+                width:500px;
+                margin:50px auto;
+}
+
+#player1 {
+  display:inline-block;
+}
+
+#player2 {
+  display:inline-block;
+}
+
+.names {
+                padding:8px 15px;
+                background:#ffffff;
+                border:0px solid #dbdbdb;
+                font-family: 'Special Elite', cursive;
+}
+
+button {
+                position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#ffffff;
+                color:#000000;
+                font-family: 'Special Elite', cursive;
+
+}
+.button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+}

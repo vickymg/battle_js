@@ -24,15 +24,9 @@ describe('Player', function() {
     expect(function(){player1.attackOpponent()} ).toThrowError("Game Over!");
   });
 
-  // it('player can paralyse another player', function() {
-  //   player.paralyseOpponent();
-  //   expect(this.paralyse).toEqual(60)
-  // });
+  it('player can ninja attack opponent', function() {
+    player1.ninjaAttackOpponent();
+    expect(player1.ninjaAttack).toEqual(true);
+  });
 
 });
-
-//
-// paralyse
-// sleep
-// poison
-// heal

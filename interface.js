@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   $('#names').submit(function(event) {
     event.preventDefault();
-    battle.setPlayers(pl1, pl2)
+    battle.setPlayers(pl1, pl2);
     var name1 = $('#name1').val();
     var name2 = $('#name2').val();
     $('#play').show(0);
@@ -19,7 +19,14 @@ $(document).ready(function() {
   });
 
   function updateScore() {
-    if(battle.player1Points === 0 || battle.player2Points === 0) {
+    if (battle.player1Points <= 0) {
+      var name2 = $('#name2').val();
+      $('.winner-name').text(name2);
+      $('#game-over').show();
+    }
+    else if (battle.player2Points <=0 ) {
+      var name1 = $('#name1').val();
+      $('.winner-name').text(name1);
       $('#game-over').show();
     }
     $('#player1points').text(battle.player1Points);
@@ -33,6 +40,16 @@ $(document).ready(function() {
 
   $('#attack2').on('click', function() {
     battle.player2.attackOpponent();
+    updateScore();
+  });
+
+  $('#ninja1').on('click', function() {
+    battle.player1.ninjaAttackOpponent();
+    updateScore();
+  });
+
+  $('#ninja2').on('click', function() {
+    battle.player2.ninjaAttackOpponent();
     updateScore();
   });
 

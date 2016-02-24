@@ -18,4 +18,10 @@ describe('Battle', function() {
     battle.attack();
     expect(battle.player1Points).toEqual(55);
   });
+
+  it('reduces a players points once attacked', function() {
+    spyOn(Math, 'random').and.returnValue(0.1);
+      battle.ninjaAttack();
+    expect(battle.player1Points).toEqual(58);
+  });
 });
