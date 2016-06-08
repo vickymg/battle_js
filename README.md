@@ -2,6 +2,8 @@ Battle in the Browser Challenge
 -----------------------------
 Makers Academy challenge - rewritten in JavaScript.
 
+Play the game at: http://vickymg.github.io/battle_js/
+
 The task is to build a battle in the browser game.
 
 Functionality:
